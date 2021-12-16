@@ -1,0 +1,2 @@
+robotframework >= 4.1.2
+allure-robotframework >= 2.9.45
