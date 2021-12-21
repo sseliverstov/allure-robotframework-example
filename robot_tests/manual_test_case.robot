@@ -5,4 +5,5 @@ Library    library.user_name.UserName  WITH NAME   KeywordUserNameExample
 *** Test Cases ***
 Manual test case
     [Tags]      allure.label=manual
-    KeywordUserNameExample.Печальный кейворд
+    KeywordUserNameExample.Печальный кейворд    1
+    KeywordUserNameExample.Ручной кейворд

@@ -1,9 +1,15 @@
 from robot.api.deco import keyword
 
+from robot.running.context import EXECUTION_CONTEXTS
+from robot.running.runkwregister import RUN_KW_REGISTER
+from robot.api import logger
+from ..manual_cases import ManualTestCases
 
-class UserName(object):
 
-    ROBOT_LIBRARY_SCOPE = 'GLOBAL'
+class UserName(ManualTestCases):
+
+    def __init__(self):
+        super().__init__()
 
     def without_decorator(self):
         pass
@@ -17,5 +23,5 @@ class UserName(object):
         pass
 
     @keyword("Печальный кейворд")
-    def failed_with_simple_decorator(self):
-        assert False
+    def failed_with_simple_decorator(self, a):
+        pass#assert False
