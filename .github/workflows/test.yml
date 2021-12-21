@@ -14,7 +14,11 @@ jobs:
     - name: Install dependencies
       run: pip install -r ./requirements.txt
 
-    - name: pwd
-      run: pwd
     - name: Run robot tests
       run: robot --pythonpath . --listener allure_robotframework ./robot_tests/
+
+    - name: Store results
+      uses: actions/upload-artifact@v2
+      with:
+        name: allure-results.zip
+        path: output
