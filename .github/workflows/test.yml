@@ -17,4 +17,4 @@ jobs:
     - name: pwd
       run: pwd
     - name: Run robot tests
-      run: robot --listener allure_robotframework ./robot_tests/
+      run: robot --pythonpath . --listener allure_robotframework ./robot_tests/
