@@ -7,7 +7,7 @@ Test Teardown    Foo.Закрыть браузер
 
 *** Test Cases ***
 Manual test case
-    [Tags]      allure.label=manual
+    [Tags]      allure.manual
     Boo.Неимплементированный кейвод
     Foo.Кейворд с ошибкой
     Foo.Что-то делаем еще ....  один    два

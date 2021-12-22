@@ -1,3 +1,4 @@
+import allure
 from robot.running.context import EXECUTION_CONTEXTS
 
 
@@ -10,7 +11,8 @@ class ManualTestCases(object):
     def start_test(self, data, result):
         tags = data.tags
 
-        if "allure.label=manual" in tags:
+        if "allure.manual" in tags:
+            allure.dynamic.label("ALLURE_MANUAL", "true")
             EXECUTION_CONTEXTS.current.dry_run = True
             actual_get_runner = EXECUTION_CONTEXTS.current.get_runner
             EXECUTION_CONTEXTS.current.actual_get_runner = actual_get_runner
